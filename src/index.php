@@ -1,60 +1,55 @@
-<?php
+ <?php
 
-echo "get that money man ";
-echo "just a little bit...";
+  $age = 21;
 
-?>
+  if ($age >= 18) {
+    echo 'you are old enough to vote!';
+  } else {
+    echo 'sorry you arent old enough to vote :/';
+  }
 
-<?php
+  $t = date("F j H");
+  echo $t;
 
-$name = 'Sid';
-$age = 12;
-$has_kids = true;
-$cash_on_hand = 345.75;
+  // empty() function can check if something is empty .. i.e database etc.
+  $posts = ['First Post'];
 
-// var_dump() will show the value of boolean and arithmetic solutions
-echo "${name} is ${age} and he has kids so in PHP it shows up as ${has_kids} ...speaking of PHP he has ${cash_on_hand} in his wallet right now!! ";
+  if (!empty($posts)) {
+    echo $posts[0];
+  } else {
+    echo 'No Posts!';
+  }
 
-var_dump($has_kids);
+  echo !empty($posts) ? $posts[0] : 'No Posts';
 
-// define use for constants that will never change.
-define("HOST", "money");
-echo HOST;
+  $favColor = 'green';
 
-// to check whats inside of an array use print_r()
-$numbers = [1, 33, 25, 203];
-$fruits = array('apple', 'orange', 'kiwi');
+  switch ($favColor) {
+    case 'grey':
+      echo 'your favorite color is grey';
+      break;
+    case 'black':
+      echo 'your favorite color is black';
+      break;
+    case 'white':
+      echo 'your favorite color is white';
+      break;
+    default:
+      echo 'your favorite color isnt white, black or grey';
+  }
 
-print_r($numbers);
-print_r($fruits);
+  // get length of array with count() function
+  $posts = ['First Post', 'Second Post', 'Third Post'];
 
-// Associative Array .. kinda like an object in JavaScript
-$colors = [
-  1 => 'red',
-  3 => 'blue',
-  6 => 'green'
-];
+  for ($x = 0; $x < count($posts); $x++) {
+    echo $posts[$x];
+  }
 
-$hex = [
-  'red' => '#f00',
-  'blue' => '0f0',
-  'green' => '#00f'
-];
+  foreach ($posts as $index => $post) {
+    echo "${index} - ${post} <br>";
+  }
 
-$person = [
-  [
-    'full_name' => 'Sid McClean',
-    'email' => 'mccleansid@email.com',
-    'association' => 'money maker'
-  ],
-  [
-    'full_name' => 'John Doe',
-    'email' => 'johndoe@email.com',
-    'association' => 'secret agent'
-  ]
-];
+  // use a global variable inside of a function using global keyword
+  // you're able to set default arguments for function using the equal sign $n1 = 4, $n2 = 5
 
-echo $person[1]['association'];
-var_dump(json_encode($person)); // theres also json_decode
-echo $colors[6];
-echo $hex['red'];
+  ?>
