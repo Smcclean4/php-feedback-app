@@ -1,4 +1,5 @@
-<div>
-  <h1><?php echo "PHP Feedback App" ?></h1>
-  <p><?php echo "This project will show feedback that users leave on your site"?></p>
-</div>
+<?php include './header.php' ?>
+<html>
+  
+</html>
+<?php include './footer.php'?>
