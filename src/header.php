@@ -22,12 +22,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a href="/php-feedback-app/src/index.php" class="nav-link">Home</a>
+          <a href="./index.php" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-        <a href="/php-feedback-app/src/feedback.php" class="nav-link">Feedback</a>
+        <a href="./feedback.php" class="nav-link">Feedback</a>
         </li>
       </ul>
     </div>
   </div>
   </nav>
+  <div class="container d-flex flex-column align-items-center">
