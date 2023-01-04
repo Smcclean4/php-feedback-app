@@ -1,5 +1,5 @@
-<?php include './header.php' ?>
-  <img src="images/image.png">
+<?php include './inc/header.php'; ?>
+  <img src="">
   <h2>Submit Your Feedback</h2>
   <p class="lead text-center">Leave feedback for Your Company</p>
   <form action="" class="mt-4 w-75">
@@ -19,4 +19,4 @@
       <input type="submit" name="submit" value="Send" class="btn btn-dark w-100">
     </div>
   </form>
-<?php include './footer.php'?>
+<?php include './inc/footer.php'; ?>
