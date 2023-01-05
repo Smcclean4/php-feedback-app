@@ -1,8 +1,8 @@
-<?php include './config/database.php' ?>
+<?php ob_start(); ?>
+<?php include './config/database.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

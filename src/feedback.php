@@ -1,42 +1,9 @@
 <?php include './inc/header.php' ?>
 
 <?php
-  $feedback = [
-    [
-      'id' => '1',
-      'name' => 'John Canty',
-      'email' => 'johncanty87@icloud.com',
-      'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-      molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-      numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-      optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-      obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-      nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-      tenetur error, harum nesciunt ipsum debitis quas aliquid.'
-    ],[
-      'id' => '2',
-      'name' => 'Marissa Vargas',
-      'email' => 'mvargas234@outlook.com',
-      'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-      molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-      numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-      optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-      obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-      nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-      tenetur error, harum nesciunt ipsum debitis quas aliquid.'
-    ],[
-      'id' => '3',
-      'name' => 'Tim Curton',
-      'email' => 'timmyc20@hotmail.com',
-      'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-      molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-      numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-      optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-      obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-      nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-      tenetur error, harum nesciunt ipsum debitis quas aliquid.'
-    ]
-  ]
+  $sql = 'SELECT * FROM feedback';
+  $result = mysqli_query($conn, $sql);
+  $feedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 <h2>Feedback</h2>
@@ -46,9 +13,12 @@
 <?php endif; ?>
 
 <?php foreach($feedback as $item): ?>
-<div class="card my-3">
-  <div class="card-body">
+<div class="card my-3 w-75">
+  <div class="card-body text-center">
     <?php echo $item['body'] ?>
+    <div class="text-secondary mt-2">
+      By <?php echo $item['name'] ?> on <?php echo date_format(date_create($item['date']), 'M/d/Y') ?>
+    </div>
   </div>
 </div>
 <?php endforeach; ?>
