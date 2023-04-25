@@ -15,7 +15,7 @@
   <nav class="navbar navbar-expand-sm navbar-light bg-light mb-4">
   <div class="container">
     <a href="#" class="navbar-brand">
-      Your Website
+      S.L.M. PHP Feedback
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-controls="navbarNav"
     data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
